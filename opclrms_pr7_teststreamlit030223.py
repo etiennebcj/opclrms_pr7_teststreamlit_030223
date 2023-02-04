@@ -7,11 +7,11 @@ import numpy as np
 # from matplotlib import pyplot as plt 
 # %matplotlib inline # chatgpt --> error message "SyntaxError: invalid syntax" --> deployment doesn't work
 #--------------------------------------------------------------------------------------------------------------#
-import matplotlib # chatgpt 2
-matplotlib.use('TkAgg') # chatgpt 2
+# import matplotlib # chatgpt 2 --> didn't work as well
+# matplotlib.use('TkAgg') # chatgpt 2 --> didn't work as well
 #--------------------------------------------------------------------------------------------------------------#
-import matplotlib.pyplot as plt
 import plotly.express as px
+import matplotlib.pyplot as plt
 import seaborn as sn
 import pickle
 import shap
@@ -307,10 +307,11 @@ if st.checkbox("Show (Hide) customer #{:.0f} feature importance".format(chk_id))
    '''-------------------------------------------------------------------------------------------------'''
    '''-------------------------------------------------------------------------------------------------'''
    # Global feature importance
-   st.markdown("<h5 style='text-align: center;'>Global feature importance</h5>", unsafe_allow_html=True)
-   feature_importance = get_model_varimportance(model, sample.columns) # sample.columns
-   fig = px.bar(feature_importance, x='var_importance', y='feature_name', orientation='h')
-   st.plotly_chart(fig)
+   if st.checkbox("Show(Hide) global feature imortance") :
+      st.markdown("<h5 style='text-align: center;'>Global feature importance</h5>", unsafe_allow_html=True)
+      feature_importance = get_model_varimportance(model, sample.columns) # sample.columns
+      fig = px.bar(feature_importance, x='var_importance', y='feature_name', orientation='h')
+      st.plotly_chart(fig)
       
    # Feature description     
    if st.checkbox("Select a feature for its desciption (show/hide)") :
