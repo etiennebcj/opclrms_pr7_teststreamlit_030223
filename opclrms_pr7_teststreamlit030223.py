@@ -6,6 +6,7 @@ import numpy as np
 # import plotly.graph_objects as go
 # from matplotlib import pyplot as plt 
 import matplotlib.pyplot as plt
+%matplotlib inline # --> error message
 import plotly.express as px
 import seaborn as sn
 import pickle
