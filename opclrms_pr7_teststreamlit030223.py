@@ -5,8 +5,8 @@ import numpy as np
 # from explainerdashboard.dashboards import ExplainerDashboard
 # import plotly.graph_objects as go
 # from matplotlib import pyplot as plt 
+%matplotlib inline # chatgpt --> error message "SyntaxError: invalid syntax"
 import matplotlib.pyplot as plt
-%matplotlib inline # --> error message
 import plotly.express as px
 import seaborn as sn
 import pickle
