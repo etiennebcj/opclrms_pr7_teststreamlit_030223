@@ -1,12 +1,12 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import plotly.express as px
 # from explainerdashboard.explainers import * # ClaissifierExplainer
 # from explainerdashboard.dashboards import ExplainerDashboard
 # import plotly.graph_objects as go
 # from matplotlib import pyplot as plt 
 import matplotlib.pyplot as plt
+import plotly.express as px
 import seaborn as sn
 import pickle
 import shap
