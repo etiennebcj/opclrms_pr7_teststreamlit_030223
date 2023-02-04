@@ -5,7 +5,11 @@ import numpy as np
 # from explainerdashboard.dashboards import ExplainerDashboard
 # import plotly.graph_objects as go
 # from matplotlib import pyplot as plt 
-%matplotlib inline # chatgpt --> error message "SyntaxError: invalid syntax"
+# %matplotlib inline # chatgpt --> error message "SyntaxError: invalid syntax" --> deployment doesn't work
+#--------------------------------------------------------------------------------------------------------------#
+import matplotlib # chatgpt 2
+matplotlib.use('TkAgg') # chatgpt 2
+#--------------------------------------------------------------------------------------------------------------#
 import matplotlib.pyplot as plt
 import plotly.express as px
 import seaborn as sn
