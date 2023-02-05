@@ -304,7 +304,7 @@ if st.checkbox("Show (Hide) customer #{:.0f} feature importance".format(chk_id))
    # dashboard = ExplainerDashboard(explainer)
    # dashboard.run()
    
-   '''-------------------------------------------------------------------------------------------------'''
+   # '''-------------------------------------------------------------------------------------------------'''
    '''-------------------------------------------------------------------------------------------------'''
    # Global feature importance
    if st.checkbox("Show(Hide) global feature imortance") :
@@ -312,7 +312,8 @@ if st.checkbox("Show (Hide) customer #{:.0f} feature importance".format(chk_id))
       feature_importance = get_model_varimportance(model, sample.columns) # sample.columns
       fig = px.bar(feature_importance, x='var_importance', y='feature_name', orientation='h')
       st.plotly_chart(fig)
-      
+   
+   '''-------------------------------------------------------------------------------------------------'''   
    # Feature description     
    if st.checkbox("Select a feature for its desciption (show/hide)") :
       list_features = description.index.to_list()
@@ -322,7 +323,7 @@ if st.checkbox("Show (Hide) customer #{:.0f} feature importance".format(chk_id))
 else:
     st.markdown("<i>…</i>", unsafe_allow_html=True)
     
-    
+'''-------------------------------------------------------------------------------------------------'''    
 # Similar customer to the one selected
 neighbors_nearest = st.checkbox("Show (Hide) similar customer")
 
