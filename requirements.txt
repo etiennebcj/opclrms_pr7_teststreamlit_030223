@@ -7,3 +7,4 @@ seaborn==0.12.2
 shap==0.41.0
 streamlit==1.17.0
 lightgbm==3.3.4
+ipython==7.31.1
