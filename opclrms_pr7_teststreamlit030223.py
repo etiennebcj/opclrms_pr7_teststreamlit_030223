@@ -17,6 +17,7 @@ import pickle
 import shap
 from sklearn.cluster import KMeans
 from zipfile import ZipFile
+from lightgbm import LGBMClassifier
 plt.style.use('fivethirtyeight')
 
 
